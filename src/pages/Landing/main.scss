@@ -1,0 +1,54 @@
+.main_form {
+    margin: 0 auto;
+    padding: 20px;
+    padding-top: 10px;
+    text-align: center;
+    max-width: calc(90vw);
+    width: 500px;
+
+    border-radius: 12px;
+    background-color: white;
+    box-shadow: 0 0 100px black;
+
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translateY(-200px) translateX(-50%); /* This has to be fixed */
+
+    .SLNav {
+        width: 100%;
+        padding: 5px;
+        display: flex;
+        margin-bottom: 15px;
+
+        button {
+            cursor: pointer;
+            flex-grow: 1;
+            border: none;
+            background-color: transparent;
+            font-weight: bold;
+            font-family: Palanquin;
+            font-size: 28px;
+            font-weight: bold;
+        
+            color: #559;
+            display: inline-block;
+        }
+        button:focus {
+            outline: 0;
+        }
+    
+        .selected {
+            text-decoration: underline;
+            cursor: default;
+            color: #50507a
+        }
+    }
+
+
+    .SLForm {
+        display: flex;
+        flex-direction: column;
+    }
+
+}

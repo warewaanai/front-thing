@@ -1,0 +1,122 @@
+.FormInputDefault,
+.FormInputError,
+.FormInputGreen,
+.FormInputWarn {
+    display: flex;
+
+    text-align: left;
+    position: relative;
+    height: 50px;
+    overflow: hidden;
+    margin: 10px;
+    flex-grow: 1;
+
+    input {
+        position: absolute;
+        display: flex;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        color: #595f6e;
+        border: none;
+        font-size: 16px;
+    }
+
+    label {
+        position: absolute;
+        left: 0;
+        bottom: 0;
+
+        pointer-events: none;
+        font-size: 18px;
+        width: 100%;
+        height: 100%;
+        border-bottom: 1px solid black;
+        white-space:nowrap;
+    }
+
+    .FormLabel::after {
+        content: "";
+        position: absolute;
+        left: 0;
+        bottom: -1px;
+        height: 100%;
+        width: 100%;
+
+        transform: translateX(-100%);
+        transition: all 0.3s ease;
+        pointer-events: none;
+    }
+
+    .content {
+        position: absolute;
+        bottom: 5px;
+        transition: all 0.3s ease;
+        width: min-content;
+        height: min-content;
+    }
+
+    .FormInputText:focus {
+        outline: 0;
+    }
+
+    .FormInputText:focus + .FormLabel .content,
+    .FormInputText:valid + .FormLabel .content {
+        transform: translateY(-160%);
+        font-size: 14px;
+    }
+
+    .FormInputText:focus + .FormLabel::after,
+    .FormInputText:valid + .FormLabel::after {
+        transform: translateX(0);
+    }
+}
+
+.FormInputDefault {
+    .FormLabel::after {
+        border-bottom: 3px solid #5fa8d3;
+    }
+
+    
+    .FormInputText:focus + .FormLabel .content,
+    .FormInputText:valid + .FormLabel .content {
+        color: #5fa8d3;
+    }
+}
+
+
+.FormInputError {
+    .FormLabel::after {
+        border-bottom: 3px solid #D8000C;
+    }
+
+    
+    .FormInputText:focus + .FormLabel .content,
+    .FormInputText:valid + .FormLabel .content {
+        color: #D8000C;
+    }
+}
+
+.FormInputGreen {
+    .FormLabel::after {
+        border-bottom: 3px solid #507B00;
+    }
+
+    
+    .FormInputText:focus + .FormLabel .content,
+    .FormInputText:valid + .FormLabel .content {
+        color: #507B00;
+    }
+}
+
+.FormInputWarn {
+    .FormLabel::after {
+        border-bottom: 3px solid #D4AF37;
+    }
+
+    
+    .FormInputText:focus + .FormLabel .content,
+    .FormInputText:valid + .FormLabel .content {
+        color: #D4AF37;
+    }
+}

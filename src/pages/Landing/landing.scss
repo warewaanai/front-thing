@@ -1,0 +1,33 @@
+#LandingContainer {
+    overflow-x: hidden;
+    overflow-y: scroll;
+    position: absolute;
+    bottom: 0;
+
+    height: calc(100vh - 60px);
+
+    scroll-snap-points-y: repeat(100vh);
+    scroll-snap-type: y mandatory;
+    scroll-behavior:smooth;
+}
+
+
+.fullscreen {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+
+    position: relative;
+    padding: 0;
+    margin: 0;
+    height: 100%;
+    width: 100vw;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+
+    overflow: hidden;
+    scroll-snap-align: start;
+    scroll-padding: 50%;
+}

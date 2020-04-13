@@ -1,0 +1,118 @@
+#CommunityTable {
+    position: absolute;
+    left: 0;
+
+    width: 200vw;
+    height: 500px;
+
+    background-color: rgba(0, 0, 0, 0.8);
+    box-shadow: 0 0 20px black, 0 0 40px black, 0 0 60px black;
+
+    max-height: 100%;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    overflow-x: hidden;
+    overflow-y: visible;
+
+    .Row {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: nowrap;
+        justify-content: center;
+
+        overflow-x: hidden;
+        overflow-y: visible;
+        align-items: center;
+
+        width: 100% !important;
+        height: 30%;
+        padding: 0;
+        width: 0;
+    }
+
+    .TableCell {
+        position: relative;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        cursor: pointer;
+
+        height: 100%;
+        margin: 10px;
+
+        background-color: rgba($color: #000, $alpha: 0.5);
+        font-size: 32px;
+        padding-left: 15px;
+        padding-right: 15px;
+
+        color: white;
+        border: solid 3px white;
+        border-radius: 4px;
+
+        transition: 0.3s;
+    }
+
+    .EventCell {
+        position: relative;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        cursor: pointer;
+        height: 95%;
+        width: max-content;
+    }
+
+    .EventCell:hover > .TableCell {
+        background-color: white;
+        color: black;
+        transform: rotate3d(1, 0, 0, 180deg);
+    }
+
+    .TableCellGroup {
+        position: relative;
+
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        flex-wrap: nowrap;
+        overflow: hidden;
+        align-items: center;
+        height: 100%;
+
+        width: 100vw !important;
+        padding: 0;
+        margin: 0;
+    }
+}
+
+#A .TableCellGroup {
+    animation: CellMovement 20s linear infinite;
+}
+#A:hover .TableCellGroup {
+    animation-play-state: paused;
+}
+
+#B .TableCellGroup {
+    animation: CellMovement 22s linear infinite;
+}
+#B:hover .TableCellGroup {
+    animation-play-state: paused;
+}
+#C .TableCellGroup {
+    animation: CellMovement 18s linear infinite;
+}
+#C:hover .TableCellGroup {
+    animation-play-state: paused;
+}
+
+@keyframes CellMovement {
+	from {
+        left: 0;
+	}
+	to {
+        left: -100vw;
+        opacity: 1;
+    }
+}

@@ -1,0 +1,52 @@
+.FormButtonDefault,
+.FormButtonBlue,
+.FormButtonGreen,
+.FormButtonRed  {
+    border-radius: 4px;
+    background: white;
+    font-size: 18px;
+    font-weight: bold;
+    padding: 5px;
+    padding-left: 10px;
+    padding-right: 10px;
+
+    transition: 0.3s ease;
+    margin: 0 auto;
+    cursor: pointer;
+    outline: none;
+}
+
+.FormButtonDefault {
+    border: solid 3px black;
+    color: black;
+}
+
+.FormButtonRed {
+    border: solid 3px #D8000C;
+    color: #D8000C;
+}
+
+.FormButtonGreen {
+    border: solid 3px #507B00;
+    color: #507B00;
+}
+
+.FormButtonBlue {
+    border: solid 3px #5fa8d3;
+    color: #5fa8d3;
+}
+
+.FormButtonRed:hover {
+    background-color: #D8000C;
+    color: white;
+}
+
+.FormButtonGreen:hover {
+    background-color: #507B00;
+    color: white;
+}
+
+.FormButtonBlue:hover {
+    background-color: #5fa8d3;
+    color: white;
+}

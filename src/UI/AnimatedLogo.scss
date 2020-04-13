@@ -1,0 +1,27 @@
+.AnimatedLogo {
+    background: linear-gradient(-45deg, purple, #ee7752, #e73c7e, #23a6d5, #23d5ab, green);
+    background-size: 200% 200%;
+    animation: animate_gradient 12s ease infinite;
+    padding: 0;
+	border: 0;
+	display: felxbox;
+}
+
+@keyframes animate_gradient {
+	0% {
+		background-position: 0% 0%;
+	}
+	25% {
+
+		background-position: 100% 0%;
+	}
+	50% {
+		background-position: 100% 100%;
+	}
+	75% {
+		background-position: 0% 100%;
+	}
+	100% {
+		background-position: 0% 0%;
+	}
+}
