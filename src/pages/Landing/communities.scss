@@ -40,7 +40,7 @@
         cursor: pointer;
 
         height: 100%;
-        margin: 10px;
+        width: 100%;
 
         background-color: rgba($color: #000, $alpha: 0.5);
         font-size: 32px;
@@ -61,7 +61,7 @@
         justify-content: center;
         cursor: pointer;
         height: 95%;
-        width: max-content;
+        margin: 10px;
     }
 
     .EventCell:hover > .TableCell {

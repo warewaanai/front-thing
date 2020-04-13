@@ -16,7 +16,7 @@ class Communities extends Component {
 }
 
 
-const TableCell = (props) => <div className="EventCell"><div className="TableCell" style={{width: props.width}}> {props.text} </div></div>
+const TableCell = (props) => <div className="EventCell"  style={{flexGrow: props.text.length}}><div className="TableCell"> {props.text} </div></div>
 class CommunityTable extends Component {
     constructor(props) {
         super(props);
