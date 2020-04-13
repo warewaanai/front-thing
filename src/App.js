@@ -7,10 +7,7 @@ import './App.css';
 function App() {
   return (
     <Router>
-      <Switch>
-        <Route exact path="/" component={Landing} />
-
-      </Switch>
+        <Landing />
     </Router>
   );
 }
