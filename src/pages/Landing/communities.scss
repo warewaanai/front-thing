@@ -1,89 +1,192 @@
-#CommunityTable {
-    position: absolute;
-    left: 0;
-
-    width: 200vw;
-    height: 500px;
-
-    background-color: rgba(0, 0, 0, 0.8);
-    box-shadow: 0 0 20px black, 0 0 40px black, 0 0 60px black;
-
-    max-height: 100%;
-
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    overflow-x: hidden;
-    overflow-y: visible;
-
-    .Row {
+@media only screen and (max-device-width: 480px) {
+    #CommunityTable {
+        position: absolute;
+        bottom: 20px;
+        left: 0;
+    
+        width: 200vw;
+        height: 250px;
+    
+        background-color: rgba(0, 0, 0, 0.8);
+        box-shadow: 0 0 20px black, 0 0 40px black, 0 0 60px black;
+    
+        max-height: 100%;
+    
         display: flex;
-        flex-direction: row;
-        flex-wrap: nowrap;
-        justify-content: center;
-
+        flex-direction: column;
+        justify-content: space-between;
         overflow-x: hidden;
         overflow-y: visible;
-        align-items: center;
-
-        width: 100% !important;
-        height: 30%;
-        padding: 0;
-        width: 0;
+    
+        .Row {
+            display: flex;
+            flex-direction: row;
+            flex-wrap: nowrap;
+            justify-content: center;
+    
+            overflow-x: hidden;
+            overflow-y: visible;
+            align-items: center;
+    
+            width: 100% !important;
+            height: 30%;
+            padding: 0;
+            width: 0;
+        }
+    
+        .TableCell {
+            position: relative;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            cursor: pointer;
+    
+            height: 100%;
+            width: 100%;
+    
+            background-color: rgba($color: #000, $alpha: 0.5);
+            font-size: 24px;
+            padding-left: 15px;
+            padding-right: 15px;
+    
+            color: white;
+            border: solid 3px white;
+            border-radius: 4px;
+    
+            transition: 0.3s;
+        }
+    
+        .EventCell {
+            position: relative;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            height: 95%;
+            margin-left: 10px;
+        }
+    
+        .EventCell:hover > .TableCell {
+            background-color: white;
+            color: black;
+            transform: rotate3d(1, 0, 0, 180deg);
+        }
+    
+        .TableCellGroup {
+            position: relative;
+    
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            flex-wrap: nowrap;
+            overflow: hidden;
+            align-items: center;
+            height: 100%;
+    
+            width: 100vw !important;
+            padding: 0;
+            margin: 0;
+        }
     }
 
-    .TableCell {
+}
+
+@media only screen and (min-device-width: 480px) {
+    #CommunityTable {
         position: relative;
+        left: 50%;
+        bottom: auto;
+    
+        width: 200vw;
+        height: 350px;
+    
+        background-color: rgba(30, 30, 60, 0.8);
+        box-shadow: 0 0 20px rgba(30, 30, 60, 1), 0 0 40px rgba(30, 30, 60, 1), 0 0 60px rgba(30, 30, 60, 1);
+        padding-bottom: 20px;
+    
+        max-height: 100%;
+    
         display: flex;
-        align-items: center;
-        justify-content: center;
-        cursor: pointer;
-
-        height: 100%;
-        width: 100%;
-
-        background-color: rgba($color: #000, $alpha: 0.5);
-        font-size: 32px;
-        padding-left: 15px;
-        padding-right: 15px;
-
-        color: white;
-        border: solid 3px white;
-        border-radius: 4px;
-
-        transition: 0.3s;
+        flex-direction: column;
+        justify-content: space-between;
+        overflow-x: hidden;
+        overflow-y: visible;
+    
+        .Row {
+            display: flex;
+            flex-direction: row;
+            flex-wrap: nowrap;
+            justify-content: center;
+    
+            overflow-x: hidden;
+            overflow-y: visible;
+            align-items: center;
+    
+            width: 100% !important;
+            height: 30%;
+            padding: 0;
+            width: 0;
+        }
+    
+        .TableCell {
+            position: relative;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            cursor: pointer;
+    
+            height: 100%;
+            width: 100%;
+    
+            background-color: rgba(0, 0, 20, $alpha: 0.5);
+            font-size: 32px;
+            padding-left: 15px;
+            padding-right: 15px;
+    
+            color: white;
+            border: solid 3px white;
+            border-radius: 4px;
+    
+            transition: 0.3s;
+        }
+    
+        .EventCell {
+            position: relative;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            height: 95%;
+            margin: 10px;
+        }
+    
+        .EventCell:hover > .TableCell {
+            background-color: white;
+            color: black;
+            transform: rotate3d(1, 0, 0, 180deg);
+        }
+    
+        .TableCellGroup {
+            position: relative;
+    
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            flex-wrap: nowrap;
+            overflow: hidden;
+            align-items: center;
+            height: 100%;
+    
+            width: 100vw !important;
+            padding: 0;
+            margin: 0;
+        }
     }
 
-    .EventCell {
-        position: relative;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        cursor: pointer;
-        height: 95%;
-        margin: 10px;
-    }
-
-    .EventCell:hover > .TableCell {
-        background-color: white;
-        color: black;
-        transform: rotate3d(1, 0, 0, 180deg);
-    }
-
-    .TableCellGroup {
-        position: relative;
-
-        display: flex;
-        flex-direction: row;
-        justify-content: center;
-        flex-wrap: nowrap;
-        overflow: hidden;
-        align-items: center;
-        height: 100%;
-
-        width: 100vw !important;
-        padding: 0;
-        margin: 0;
+    #Communities .Heading {
+        font-size: 44px;
     }
 }
 
@@ -100,6 +203,7 @@
 #B:hover .TableCellGroup {
     animation-play-state: paused;
 }
+
 #C .TableCellGroup {
     animation: CellMovement 18s linear infinite;
 }
@@ -115,4 +219,20 @@
         left: -100vw;
         opacity: 1;
     }
+}
+
+#Communities {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#Communities .Heading {
+    color: white;
+    display: flex;
+    flex-direction: row-reverse;
+    width: 100%;
+    padding-right: 100px;
+    z-index: -1;
 }

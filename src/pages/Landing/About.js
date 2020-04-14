@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import './landing.scss'
 import './about.scss'
 
-import background from '../../assets/Pictures/backgrounds/2.jpg'
+import background from '../../assets/Pictures/backgrounds/2.png'
 
 
 class About extends Component {

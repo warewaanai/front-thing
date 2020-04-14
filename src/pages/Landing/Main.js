@@ -8,7 +8,7 @@ import google from '../../3rd/google.png'
 import facebook from '../../3rd/facebook.svg'
 import twitter from '../../3rd/twitter.png'
 
-import background from '../../assets/Pictures/backgrounds/2.jpg'
+import background from '../../assets/Pictures/backgrounds/2.png'
 
 import './landing.scss'
 import './main.scss'

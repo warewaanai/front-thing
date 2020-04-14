@@ -2,13 +2,14 @@ import React, { Component } from 'react';
 import './landing.scss'
 import './communities.scss'
 
-import background from '../../assets/Pictures/backgrounds/2.jpg'
+import background from '../../assets/Pictures/backgrounds/2.png'
 
 
 class Communities extends Component {
     render () {
         return (
             <div id="Communities" className="fullscreen" style={{backgroundImage: `url(${background})`}}>
+                <h1 className="Heading">Join Countless Communities on Feathercon</h1>
                 <CommunityTable />
             </div>
         );
@@ -22,26 +23,28 @@ class CommunityTable extends Component {
         super(props);
 
         this.row = [[], [], []];
+
+        let mobile = false;
+        if( /Android|webOS|iPhone|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) )
+            mobile = true;
+
         this.row[0] = [
             <TableCell text="Tennis"/>,
-            <TableCell text="CS Go"/>,
+            <TableCell text="CS GO"/>,
             <TableCell text="Ping Pong"/>,
-            <TableCell text="French Learners"/>,
-            <TableCell text="Starcraft II"/>,
+            (!mobile ? [ <TableCell text="French Learners"/>,  <TableCell text="Starcraft II"/>] : null)
         ]
         this.row[1] = [
             <TableCell text="Football"/>,
             <TableCell text="Oxford Students"/>,
             <TableCell text="AoE II"/>,
-            <TableCell text="Berliners"/>,
-            <TableCell text="Liverpool Fans"/>,
+            (!mobile ? [ <TableCell text="York Students"/>,  <TableCell text="Learning to Code"/>] : null)
         ]
         this.row[2] = [
             <TableCell text="Karaoke"/>,
             <TableCell text="Chinese Learners"/>,
             <TableCell text="Amateur Cooks"/>,
-            <TableCell text="York Studens"/>,
-            <TableCell text="Learning to Code"/>,
+            (!mobile ? [ <TableCell text="Berliners"/>,  <TableCell text="Coldplay Fans"/>] : null)
         ]
     }
 

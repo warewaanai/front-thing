@@ -15,7 +15,6 @@ class NavBar extends Component {
                 <a href="#Communities"><p className={this.props.where === 'communities' ? 'active' : ''}>Communities</p></a>
                 <a href="#Connector"><p className={this.props.where === 'connector' ? 'active' : ''}>Connector</p></a>
                 <a href="#Guidelines"><p className={this.props.where === 'guidelines' ? 'active' : ''}>Guidelines</p></a>
-                <a href="#NotEvil"><p className={`notEvil ${this.props.where === 'notevil' ? 'active' : ''}`}>#NotEvil</p></a>
             </div>
         </div>
         )

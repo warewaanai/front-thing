@@ -5,11 +5,9 @@ import Landing from './pages/Landing/Landing.js'
 import './App.css';
 
 function App() {
-  return (
-//    <Router>
+    return (
         <Landing />
-//    </Router>
-  );
+    );
 }
 
 export default App;
